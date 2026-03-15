@@ -40,16 +40,15 @@
             color: #ffffff;
         }
 
-        /* --- HERO TEXT BLACK FIX --- */
+        /* Forces Hero Section Text to Black */
         .hero-header h1, 
         .hero-header p, 
         .hero-header h5,
-        .hero-header .input-group-text,
         .hero-header label {
             color: #000000 !important;
         }
 
-        /* --- NAVBAR & HAMBURGER FIX --- */
+        /* Mobile Hamburger Fix */
         .navbar-toggler-icon {
             filter: invert(1) grayscale(100%) brightness(200%);
         }
@@ -57,37 +56,59 @@
             border-color: rgba(255, 255, 255, 0.5) !important;
         }
 
-        /* --- GLOBAL OVERRIDES --- */
         .text-primary { color: var(--bs-primary) !important; }
         .text-secondary { color: var(--bs-secondary) !important; }
+        
         .btn-primary {
             color: white;
             background: linear-gradient(45deg, var(--bs-primary), var(--bs-secondary));
             border: none;
         }
-        .btn-primary:hover {
-            background: linear-gradient(45deg, #CC3700, #009B9D);
-        }
+
         .display-4, .display-6, h1, h2, h3, h4, h5, h6 {
             color: var(--bs-primary) !important;
             font-family: 'Fredoka One', cursive;
         }
+
         .bg-white {
             background: linear-gradient(135deg, #2a2a3e 0%, #1e1e2f 100%) !important;
             color: #ffffff;
         }
+
         .navbar {
             background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
         }
+
         .navbar .nav-link { color: #ffffff !important; }
         .navbar .nav-link:hover, .navbar .nav-link.active { color: var(--bs-primary) !important; }
+
+        .accordion-item {
+            background-color: rgba(255, 255, 255, 0.05) !important;
+            border: 1px solid var(--bs-primary) !important;
+            margin-bottom: 10px;
+            border-radius: 10px !important;
+            overflow: hidden;
+        }
+
+        .accordion-button {
+            background-color: transparent !important;
+            color: #ffffff !important;
+            box-shadow: none !important;
+        }
+
+        .accordion-button:not(.collapsed) {
+            color: var(--bs-secondary) !important;
+        }
+
+        .accordion-body {
+            color: #cccccc;
+        }
         
         .roadmap-item {
             background: rgba(255, 255, 255, 0.05);
-            padding: 20px;
+            padding: 25px;
             border-radius: 15px;
             border: 1px solid var(--bs-primary);
-            margin: 10px;
         }
     </style>
 </head>
@@ -125,7 +146,7 @@
         <div class="container py-4">
             <div class="row g-5 align-items-center">
                 <div class="col-lg-6 animated fadeIn order-lg-2">
-                    <img class="img-fluid animated pulse infinite" style="animation-duration: 3s;" src="1.jpg" alt="SHRIMPY mascot">
+                    <img class="img-fluid animated pulse infinite" style="animation-duration: 3s;" src="1.jpg" alt="SHRIMPY">
                 </div>
                 <div class="col-lg-6 order-lg-1">
                     <h1 class="display-4 mb-3 animated slideInDown">Welcome, Shrimp. The ocean floor is rising. Your waves begin here.</h1>
@@ -149,15 +170,15 @@
         <div class="container">
             <div class="row g-5 align-items-center">
                 <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.1s">
-                    <img class="img-fluid mb-4" src="2.png" alt="SHRIMPY on throne">
-                    <img class="img-fluid" src="3.png" alt="SHRIMPY greeting">
+                    <img class="img-fluid mb-4" src="2.png" alt="SHRIMPY Narrative">
+                    <img class="img-fluid" src="3.png" alt="SHRIMPY Vision">
                 </div>
                 <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.5s">
                     <div class="h-100">
                         <h1 class="display-6">NARRATIVE & VISION</h1>
                         <p class="text-primary fs-5 mb-4">$SHRIMPY — The movement for small fish with big ambitions.</p>
-                        <p>NARRATIVE: $SHRIMPY emerged from the ocean depths, a coin for those who rise from the bottom, think wild, and trust their instincts over the tides. This is more than a meme; it's a tidal wave.</p>
-                        <p class="mb-4">Every holder, every meme, every buy stirs the ocean. We don't promise serenity, we embrace the chaos and build something colossal from it.</p>
+                        <p>NARRATIVE: $SHRIMPY emerged from the ocean depths, a coin for those who rise from the bottom, think wild, and trust their instincts over the tides. We're not chasing calm waters; we're chasing tsunamis that make history. This is more than a meme; it's a tidal wave.</p>
+                        <p class="mb-4">Every holder, every meme, every buy stirs the ocean. We don't promise serenity, we embrace the chaos and build something colossal from it. We flirt with currents, tease the waves, and make every move look like art.</p>
                         <p class="mb-4">VISION AND GOALS: $SHRIMPY isn't just a meme — it's a long-term tsunami. We started as depths on-chain, but we're building for the surface: a community-driven coin with serious utility down the line.</p>
                         <div class="d-flex align-items-center mb-2">
                             <i class="fa fa-check bg-light text-primary btn-sm-square rounded-circle me-3 fw-bold"></i>
@@ -177,19 +198,11 @@
         </div>
     </div>
 
-    <div class="container-xxl py-5">
-        <div class="container text-center">
-            <div class="wow fadeInUp" data-wow-delay="0.1s">
-                <img class="img-fluid" src="1.png" alt="SHRIMPY Movement">
-            </div>
-        </div>
-    </div>
-
     <div id="features" class="container-xxl py-5">
         <div class="container">
             <div class="text-center mx-auto wow fadeInUp" data-wow-delay="0.1s" style="max-width: 500px;">
                 <h1 class="display-6">Key Features</h1>
-                <p class="text-primary fs-5 mb-5">Built for small fish and meme lovers</p>
+                <p class="text-primary fs-5 mb-5">Built for small fish and long-term vision</p>
             </div>
             <div class="row g-5">
                 <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
@@ -220,11 +233,6 @@
                     </div>
                 </div>
             </div>
-            <div class="row justify-content-center mt-5">
-                <div class="col-lg-8 wow fadeInUp" data-wow-delay="0.3s">
-                    <img class="img-fluid rounded shadow" src="2.png" alt="SHRIMPY treasures">
-                </div>
-            </div>
         </div>
     </div>
     
@@ -235,11 +243,11 @@
             <div class="owl-carousel roadmap-carousel wow fadeInUp" data-wow-delay="0.1s">
                 <div class="roadmap-item">
                     <h5>Phase 1</h5>
-                    <span>Depths Awakened &bull; Live on Pump.fun &bull; Build school</span>
+                    <span>Depths Awakened &bull; Live on Pump.fun &bull; Seed meme culture</span>
                 </div>
                 <div class="roadmap-item">
                     <h5>Phase 2</h5>
-                    <span>School Expanding &bull; Grow Socials &bull; Host contests</span>
+                    <span>School Expanding &bull; Grow Telegram & X &bull; Host contests</span>
                 </div>
                 <div class="roadmap-item">
                     <h5>Phase 3</h5>
@@ -249,9 +257,6 @@
                     <h5>Phase 4</h5>
                     <span>Legacy of Waves &bull; Global brand &bull; Cross-ocean expansion</span>
                 </div>
-            </div>
-            <div class="mt-5">
-                <img class="img-fluid rounded shadow" src="3.png" alt="Goal">
             </div>
         </div>
     </div>
@@ -277,19 +282,68 @@
         <div class="container">
             <div class="text-center mx-auto wow fadeInUp" data-wow-delay="0.1s" style="max-width: 500px;">
                 <h1 class="display-6">FAQ</h1>
+                <p class="text-primary fs-5 mb-5">Everything you need to know</p>
             </div>
             <div class="row justify-content-center">
                 <div class="col-lg-10">
                     <div class="accordion" id="accordionExample">
-                        <div class="accordion-item bg-transparent border-primary">
+                        <div class="accordion-item wow fadeInUp" data-wow-delay="0.1s">
                             <h2 class="accordion-header" id="headingOne">
-                                <button class="accordion-button bg-dark text-white" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne">
+                                <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne">
                                     Q: What is $SHRIMPY?
                                 </button>
                             </h2>
                             <div id="collapseOne" class="accordion-collapse collapse show" data-bs-parent="#accordionExample">
                                 <div class="accordion-body">
-                                    $SHRIMPY is a community-driven meme coin built for small fish.
+                                    $SHRIMPY is a community-driven meme coin built for small fish, traders, and meme lovers. It's designed for believers who rise fast and trust their instincts. It’s not just a token; it’s a tidal wave.
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion-item wow fadeInUp" data-wow-delay="0.2s">
+                            <h2 class="accordion-header" id="headingTwo">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo">
+                                    Q: Where can I buy $SHRIMPY?
+                                </button>
+                            </h2>
+                            <div id="collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                                <div class="accordion-body">
+                                    $SHRIMPY will be live on Pump.fun. Early shrimps get in cheaper thanks to the bonding curve launch. Keep an eye on our socials for the official link once we launch!
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion-item wow fadeInUp" data-wow-delay="0.3s">
+                            <h2 class="accordion-header" id="headingThree">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree">
+                                    Q: How do I join the community?
+                                </button>
+                            </h2>
+                            <div id="collapseThree" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                                <div class="accordion-body">
+                                    The heart of $SHRIMPY is our Telegram and X (Twitter) channels. Join us to get daily memes, contest updates, and vibe with the rest of the school.
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion-item wow fadeInUp" data-wow-delay="0.4s">
+                            <h2 class="accordion-header" id="headingFour">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour">
+                                    Q: What makes $SHRIMPY different?
+                                </button>
+                            </h2>
+                            <div id="collapseFour" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                                <div class="accordion-body">
+                                    We focus on the "Small Fish." While other coins cater to whales, $SHRIMPY is built for the community. We embrace playful chaos and competitive energy to ensure even the smallest shrimp can make a big wave.
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion-item wow fadeInUp" data-wow-delay="0.5s">
+                            <h2 class="accordion-header" id="headingFive">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFive">
+                                    Q: Is there utility planned?
+                                </button>
+                            </h2>
+                            <div id="collapseFive" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                                <div class="accordion-body">
+                                    Yes! While we are community-first, Phase 3 of our roadmap includes introducing staking, mini-games, and NFTs to bring more value to our long-term holders.
                                 </div>
                             </div>
                         </div>
