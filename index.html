@@ -28,13 +28,10 @@
 
     <style>
         :root {
-            /* Define the new primary color: Orange Red */
             --bs-primary: #FF4500;
             --bs-primary-rgb: 255, 69, 0;
-            /* Define turquoise for accents */
             --bs-secondary: #00CED1;
             --bs-secondary-rgb: 0, 206, 209;
-            /* Dark for contrast */
             --bs-dark: #000000;
         }
 
@@ -44,7 +41,27 @@
             color: #ffffff;
         }
 
-        /* Override Bootstrap utility classes to use the new colors */
+        /* --- THE SPECIFIC FIXES --- */
+        
+        /* Forces all text in the Hero Section to Black */
+        .hero-header h1, 
+        .hero-header p, 
+        .hero-header h5,
+        .hero-header .display-4 {
+            color: #000000 !important;
+        }
+
+        /* Makes the mobile hamburger menu icon white */
+        .navbar-toggler-icon {
+            filter: invert(1) grayscale(100%) brightness(200%);
+        }
+        
+        .navbar-toggler {
+            border-color: rgba(255, 255, 255, 0.5) !important;
+        }
+
+        /* --- END FIXES --- */
+
         .text-primary {
             color: var(--bs-primary) !important;
         }
@@ -62,25 +79,11 @@
         .spinner-grow.text-primary {
             color: var(--bs-primary) !important;
         }
-        .hero-header {
-            background: white;
-            color: black;
-        }
-        .hero-header h1, .hero-header p, .hero-header h5 {
-            color: black !important;
-        }
 
-        /* Make headings orange */
         .display-4, .display-6, h1, h2, h3, h4, h5, h6 {
             color: var(--bs-primary) !important;
         }
 
-        /* Override for hero h1 to black as requested */
-        .hero-header .display-4 {
-            color: black !important;
-        }
-
-        /* Styling for the copied text/buttons */
         .input-group button.btn-primary {
             color: black !important;
         }
@@ -95,7 +98,6 @@
             font-family: 'Fredoka One', cursive;
         }
 
-        /* Make sections dark */
         .container-xxl {
             background: transparent;
             color: #ffffff;
@@ -128,6 +130,7 @@
         class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
         <div class="spinner-grow text-primary" role="status"></div>
     </div>
+    
     <nav class="navbar navbar-expand-lg bg-white navbar-light sticky-top p-0 px-4 px-lg-5">
         <a href="#home" class="navbar-brand d-flex align-items-center">
             <h2 class="m-0 text-dark"><img class="img-fluid me-2" src="img/icon-1.png" alt=""
@@ -164,14 +167,14 @@
                 </div>
                 
                 <div class="col-lg-6 order-lg-1">
-                    <h1 class="display-4 mb-3 animated slideInDown" style="color: white !important;">Welcome, Shrimp. The ocean floor is rising. Your waves begin here.</h1>
-                    <p class="animated slideInDown" style="color: #cccccc !important;">
+                    <h1 class="display-4 mb-3 animated slideInDown">Welcome, Shrimp. The ocean floor is rising. Your waves begin here.</h1>
+                    <p class="animated slideInDown">
                         $SHRIMPY — Small Fish. Big Waves. The whales have had their time. Something is rising from the ocean floor. And it's got teal and purple stripes. 🦐 We shrimp. We wave. We repeat.
                         We're not whales. We're SHRIMPS. Meme coin. Community-first. Built for small fish, traders, and believers who rise fast and think wild.
                     </p>
                     
                     <div class="wow fadeInUp mt-4" data-wow-delay="0.5s">
-                        <h5 class="text-light mb-2">Contract Address (CA):</h5>
+                        <h5 class="mb-2">Contract Address (CA):</h5>
                         <div class="input-group">
                             <input type="text" class="form-control bg-light text-dark" id="ca-hero" value="46YRESRHrebZw6K7Vcwq4wP7pKdM3ZxCPPrnHDEHpump" readonly style="font-size: 0.9rem; font-weight: 500;">
                             <button class="btn btn-primary" type="button" onclick="copyCA('ca-hero', this)">COPY</button>
@@ -219,28 +222,20 @@
             </div>
         </div>
     </div>
-    
-    <div class="container-xxl py-5">
-        <div class="container text-center">
-            <div class="wow fadeInUp" data-wow-delay="0.1s">
-                <img class="img-fluid" src="1.png" alt="Join the SHRIMPY Movement promotional image">
-            </div>
-        </div>
-    </div>
 
     <div id="features" class="container-xxl py-5">
         <div class="container">
             <div class="text-center mx-auto wow fadeInUp" data-wow-delay="0.1s" style="max-width: 500px;">
-                <h1 class="display-6">Key Features & The $SHRIMPY Difference</h1>
-                <p class="text-primary fs-5 mb-5">Built for small fish and meme lovers with long-term vision</p>
+                <h1 class="display-6">Key Features</h1>
+                <p class="text-primary fs-5 mb-5">Built for small fish and meme lovers</p>
             </div>
             <div class="row g-5">
                 <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
                     <div class="d-flex align-items-start">
                         <img class="img-fluid flex-shrink-0" src="img/icon-7.png" alt="">
                         <div class="ps-4">
-                            <h5 class="mb-3">Bonding Curve Launch</h5>
-                            <span>Early shrimps get in cheaper, rewarding our earliest believers.</span>
+                            <h5 class="mb-3">Bonding Curve</h5>
+                            <span>Early shrimps get in cheaper.</span>
                         </div>
                     </div>
                 </div>
@@ -249,7 +244,7 @@
                         <img class="img-fluid flex-shrink-0" src="img/icon-6.png" alt="">
                         <div class="ps-4">
                             <h5 class="mb-3">Community Rewards</h5>
-                            <span>Every buy, meme, and engagement stirs the ocean.</span>
+                            <span>Engagement stirs the ocean.</span>
                         </div>
                     </div>
                 </div>
@@ -257,264 +252,31 @@
                     <div class="d-flex align-items-start">
                         <img class="img-fluid flex-shrink-0" src="img/icon-5.png" alt="">
                         <div class="ps-4">
-                            <h5 class="mb-3">Anti-Dump Philosophy</h5>
-                            <span>Team and community tokens ensure long-term sustainability.</span>
+                            <h5 class="mb-3">Anti-Dump</h5>
+                            <span>Tokens ensure sustainability.</span>
                         </div>
                     </div>
-                </div>
-                <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
-                    <div class="d-flex align-items-start">
-                        <img class="img-fluid flex-shrink-0" src="img/icon-4.png" alt="">
-                        <div class="ps-4">
-                            <h5 class="mb-3">Planned Utility</h5>
-                            <span>Future collaborations and features are already bubbling up.</span>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.3s">
-                    <div class="d-flex align-items-start">
-                        <img class="img-fluid flex-shrink-0" src="img/icon-3.png" alt="">
-                        <div class="ps-4">
-                            <h5 class="mb-3">Community First</h5>
-                            <span>A tight-knit school where every shrimp contributes to the wave.</span>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.5s">
-                    <div class="d-flex align-items-start">
-                        <img class="img-fluid flex-shrink-0" src="img/icon-8.png" alt="">
-                        <div class="ps-4">
-                            <h5 class="mb-3">Chaos with Purpose</h5>
-                            <span>Fun, playful, competitive, and designed for believers.</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="row justify-content-center mt-5">
-                <div class="col-lg-8 wow fadeInUp" data-wow-delay="0.3s">
-                    <img class="img-fluid rounded shadow" src="2.png" alt="SHRIMPY mascot on a pile of treasures">
                 </div>
             </div>
         </div>
     </div>
-    
-    <div id="roadmap" class="container-xxl py-5">
-        <div class="container">
-            <div class="text-center mx-auto wow fadeInUp" data-wow-delay="0.1s" style="max-width: 500px;">
-                <h1 class="display-6">ROADMAP</h1>
-                <p class="text-primary fs-5 mb-5">We shrimp. We wave. We repeat.</p>
-            </div>
-            <div class="owl-carousel roadmap-carousel wow fadeInUp" data-wow-delay="0.1s">
-                <div class="roadmap-item">
-                    <div class="roadmap-point"><span></span></div>
-                    <h5>Phase 1</h5>
-                    <span>Depths Awakened (Live on Pump.fun) &nbsp;&bull;&nbsp; Build first tight-knit school &nbsp;&bull;&nbsp; Seed meme culture & viral currents &nbsp;&bull;&nbsp; Track bonding curve & trend tides</span>
-                </div>
-                <div class="roadmap-item">
-                    <div class="roadmap-point"><span></span></div>
-                    <h5>Phase 2</h5>
-                    <span>School Expanding &nbsp;&bull;&nbsp; Expand Telegram & X (Twitter) &nbsp;&bull;&nbsp; Host contests, challenges, and events &nbsp;&bull;&nbsp; Reward early shrimps & active believers &nbsp;&bull;&nbsp; Plan for DEX surfacing</span>
-                </div>
-                <div class="roadmap-item">
-                    <div class="roadmap-point"><span></span></div>
-                    <h5>Phase 3</h5>
-                    <span>Utility Surfacing &nbsp;&bull;&nbsp; Introduce first utility features: staking, mini-games, NFTs &nbsp;&bull;&nbsp; Launch community-driven initiatives &nbsp;&bull;&nbsp; Collaborate with other meme projects / influencers &nbsp;&bull;&nbsp; Continue trending on DEX</span>
-                </div>
-                <div class="roadmap-item">
-                    <div class="roadmap-point"><span></span></div>
-                    <h5>Phase 4</h5>
-                    <span>Legacy of Waves &nbsp;&bull;&nbsp; Expand to other oceans &nbsp;&bull;&nbsp; Make $SHRIMPY a household name in meme culture &nbsp;&bull;&nbsp; Host large-scale events & campaigns &nbsp;&bull;&nbsp; Solidify $SHRIMPY as a community, culture, and tsunami</span>
-                </div>
-            </div>
-            <div class="row justify-content-center mt-5">
-                <div class="col-lg-10 wow fadeInUp text-center" data-wow-delay="0.5s">
-                    <h2 class="display-6 mb-4">Phase 4 Goal: Legacy of Waves 🚀</h2>
-                    <img class="img-fluid rounded shadow" src="3.png" alt="SHRIMPY shrimps planting the flag on the moon">
-                </div>
-            </div>
-        </div>
-    </div>
-    
+
     <div id="tokenomics" class="container-xxl py-5 my-5" style="background: linear-gradient(135deg, #000022 0%, #001122 100%);">
-        <div class="container py-5">
-            <div class="text-center mx-auto wow fadeInUp" data-wow-delay="0.1s" style="max-width: 500px;">
-                <h1 class="display-6" style="color: white !important;">TOKENOMICS</h1>
-                <p class="text-primary fs-5 mb-5">The Heart of $SHRIMPY's Structure</p>
-            </div>
-            
+        <div class="container py-5 text-center">
+            <h1 class="display-6" style="color: white !important;">TOKENOMICS</h1>
             <div class="row justify-content-center">
-                <div class="col-lg-8 wow fadeInUp" data-wow-delay="0.3s">
-                    <div class="bg-white border border-primary p-4 p-md-5 rounded shadow-sm text-center">
-                        <h2 class="text-dark mb-4">Official Contract Address</h2>
+                <div class="col-lg-8">
+                    <div class="bg-white border border-primary p-4 rounded shadow-sm">
+                        <h2 class="text-dark mb-4">Official CA</h2>
                         <div class="input-group">
                             <input type="text" class="form-control" id="ca-tokenomics" value="46YRESRHrebZw6K7Vcwq4wP7pKdM3ZxCPPrnHDEHpump" readonly>
                             <button class="btn btn-primary" type="button" onclick="copyCA('ca-tokenomics', this)">COPY</button>
                         </div>
-                        <p class="text-secondary mt-3 mb-0">Always verify the address before executing any trades.</p>
                     </div>
                 </div>
             </div>
         </div>
     </div>
-    
-    <div id="faq" class="container-xxl py-5">
-        <div class="container">
-            <div class="text-center mx-auto wow fadeInUp" data-wow-delay="0.1s" style="max-width: 500px;">
-                <h1 class="display-6">FAQ + How to Buy $SHRIMPY</h1>
-                <p class="text-primary fs-5 mb-5">Frequently Asked Questions</p>
-            </div>
-            <div class="row justify-content-center">
-                <div class="col-lg-10">
-                    <div class="accordion" id="accordionExample">
-                        <div class="accordion-item wow fadeInUp" data-wow-delay="0.1s">
-                            <h2 class="accordion-header" id="headingOne">
-                                <button class="accordion-button" type="button" data-bs-toggle="collapse"
-                                    data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-                                    Q: What is $SHRIMPY?
-                                </button>
-                            </h2>
-                            <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne"
-                                data-bs-parent="#accordionExample">
-                                <div class="accordion-body">
-                                    $SHRIMPY is a community-driven meme coin built for small fish, traders, and meme lovers. It's chaotic, fun, and designed for believers who rise fast and trust their instincts. Not just a token — it's a tidal wave. Confess. Commit. Conquer.
-                                </div>
-                            </div>
-                        </div>
-                        <div class="accordion-item wow fadeInUp" data-wow-delay="0.2s">
-                            <h2 class="accordion-header" id="headingTwo">
-                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                                    data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-                                    Q: Where can I buy $SHRIMPY?
-                                </button>
-                            </h2>
-                            <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo"
-                                data-bs-parent="#accordionExample">
-                                <div class="accordion-body">
-                                    $SHRIMPY is live only on Pump.fun for now. Early shrimps get in cheaper thanks to the bonding curve, so don't sleep! [Buy link]
-                                </div>
-                            </div>
-                        </div>
-                        <div class="accordion-item wow fadeInUp" data-wow-delay="0.3s">
-                            <h2 class="accordion-header" id="headingThree">
-                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                                    data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-                                    Q: How do I join the $SHRIMPY community?
-                                </button>
-                            </h2>
-                            <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree"
-                                data-bs-parent="#accordionExample">
-                                <div class="accordion-body">
-                                    The Telegram is the heart of $SHRIMPY. Get memes, updates, contests, and daily hype straight from fellow SHRIMPS. [Join here]
-                                </div>
-                            </div>
-                        </div>
-                        <div class="accordion-item wow fadeInUp" data-wow-delay="0.4s">
-                            <h2 class="accordion-header" id="headingFour">
-                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                                    data-bs-target="#collapseFour" aria-expanded="true" aria-controls="collapseFour">
-                                    Q: Is $SHRIMPY just a meme coin?
-                                </button>
-                            </h2>
-                            <div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="headingFour"
-                                data-bs-parent="#accordionExample">
-                                <div class="accordion-body">
-                                    Right now, $SHRIMPY is community-first and meme-driven. Utility may surface later, but the focus is on building a tight-knit, fun, and hype-driven school.
-                                </div>
-                            </div>
-                        </div>
-                        <div class="accordion-item wow fadeInUp" data-wow-delay="0.5s">
-                            <h2 class="accordion-header" id="headingFive">
-                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                                    data-bs-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
-                                    Q: Is it safe?
-                                </button>
-                            </h2>
-                            <div id="collapseFive" class="accordion-collapse collapse" aria-labelledby="headingFive"
-                                data-bs-parent="#accordionExample">
-                                <div class="accordion-body">
-                                    Dev tokens are mostly locked, liquidity is live, and everything is transparent on-chain.
-                                </div>
-                            </div>
-                        </div>
-                        <div class="accordion-item wow fadeInUp" data-wow-delay="0.6s">
-                            <h2 class="accordion-header" id="headingSix">
-                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                                    data-bs-target="#collapseSix" aria-expanded="false" aria-controls="collapseSix">
-                                    Q: What makes $SHRIMPY different from other meme coins?
-                                </button>
-                            </h2>
-                            <div id="collapseSix" class="accordion-collapse collapse" aria-labelledby="headingSix"
-                                data-bs-parent="#accordionExample">
-                                <div class="accordion-body">
-                                    Small fish making big waves; Playful chaos with competitive energy; Bonding curve ensures early adopters are rewarded; Long-term vision with future utility.
-                                </div>
-                            </div>
-                        </div>
-                        <div class="accordion-item wow fadeInUp" data-wow-delay="0.7s">
-                            <h2 class="accordion-header" id="headingSeven">
-                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                                    data-bs-target="#collapseSeven" aria-expanded="false" aria-controls="collapseSeven">
-                                    Q: How do I "shrimp" with $SHRIMPY?
-                                </button>
-                            </h2>
-                            <div id="collapseSeven" class="accordion-collapse collapse" aria-labelledby="headingSeven"
-                                data-bs-parent="#accordionExample">
-                                <div class="accordion-body">
-                                    Easy: 1. Grab your $SHRIMPY bags on Pump.fun. 2. Join the Telegram to vibe with the school. 3. Meme, chat, compete, and watch the wave grow. Everyone's got a little shrimp in them — embrace it.
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    
-    <div id="contact" class="container-fluid footer mt-5 pt-5 wow fadeIn" data-wow-delay="0.1s">
-        <div class="container py-5">
-            <div class="row g-5">
-                <div class="col-md-6">
-                    <h1 class="text-dark mb-4"><img class="img-fluid me-2" src="img/icon-1.png" alt=""
-                            style="width: 45px;">$SHRIMPY</h1>
-                    <span>$SHRIMPY isn’t just a token, it’s a statement: Small Fish. Big Waves.</span>
-                </div>
-                <div class="col-md-6">
-                    <h5 class="mb-4">Newsletter</h5>
-                    <p>Be the first to hear about new contests and events.</p>
-                    <div class="position-relative">
-                        <input class="form-control bg-transparent w-100 py-3 ps-4 pe-5" type="text"
-                            placeholder="Your email">
-                        <button type="button"
-                            class="btn btn-dark py-2 px-3 position-absolute top-0 end-0 mt-2 me-2">Tap IN</button>
-                    </div>
-                </div>
-                <div class="col-lg-6 col-md-6">
-                    <h5 class="mb-4">Get In Touch</h5>
-                    <p><i class="fa fa-map-marker-alt me-3"></i>Coming Soon</p>
-                </div>
-                <div class="col-lg-6 col-md-6">
-                    <h5 class="mb-4">Follow Us</h5>
-                    <div class="d-flex">
-                        <a class="btn btn-square rounded-circle me-1" href="https://x.com/SINNONPUMP" target="_blank"><i class="fab fa-twitter"></i></a>
-                        <a class="btn btn-square rounded-circle me-1" href="https://t.me/SINNONPUMP" target="_blank"><i class="fab fa-telegram"></i></a>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="container-fluid copyright">
-            <div class="container">
-                <div class="row">
-                    <div class="col-md-6 text-center text-md-start mb-3 mb-md-0">
-                        &copy; <a href="#">$SHRIMPY</a>, All Right Reserved.
-                    </div>
-                    
-                </div>
-            </div>
-        </div>
-    </div>
-    <a href="#home" class="btn btn-lg btn-primary btn-lg-square rounded-circle back-to-top"><i
-            class="bi bi-arrow-up"></i></a>
-
 
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
